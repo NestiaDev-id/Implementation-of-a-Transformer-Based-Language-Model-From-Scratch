@@ -1,0 +1,22 @@
+--extra-index-url https://download.pytorch.org/whl/cpu # For CPU-only installation
+# --extra-index-url https://download.pytorch.org/whl/cu118 # For CUDA 11.8 installation
+# --extra-index-url https://download.pytorch.org/whl/cu121 # For CUDA 12.1 installation
+numpy
+tokenizers>=0.13.0
+transformers>=4.30.0
+tqdm
+pyyaml
+tensorboard
+sentencepiece
+bitsandbytes
+accelerate
+
+pandas
+matplotlib
+seaborn
+
+# Evaluation
+# torchmetrics
+
+# Serialization
+# pickle-mixin
