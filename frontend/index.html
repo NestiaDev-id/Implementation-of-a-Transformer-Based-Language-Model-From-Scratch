@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #020617;
+        color: #f8fafc;
+        overflow-x: hidden;
+      }
+      .font-mono {
+        font-family: "JetBrains Mono", monospace;
+      }
+      @keyframes flow {
+        0% {
+          stroke-dashoffset: 100;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+      .flow-animation {
+        stroke-dasharray: 10;
+        animation: flow 5s linear infinite;
+      }
+      /* Menargetkan class custom-scrollbar yang Anda buat */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px; /* Lebar scrollbar vertikal */
+      }
+
+      /* Bagian belakang/jalur scrollbar */
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #1e293b; /* Warna yang sama dengan bg-slate-800 */
+        border-radius: 10px;
+      }
+
+      /* Bagian batang yang digeser (thumb) */
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        /* Menggunakan warna cyan agar senada dengan gradasi kiri-kanan Anda */
+        background: #0891b2;
+        border-radius: 10px;
+      }
+
+      /* Efek saat mouse di atas scrollbar */
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #0e7490; /* Warna cyan yang lebih gelap */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
