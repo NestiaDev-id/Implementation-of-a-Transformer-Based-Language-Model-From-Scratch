@@ -148,10 +148,9 @@ def reservoir_sample(file_path, sample_size):
 
 def create_tokenizer_corpus(sample_size_per_file=1_000_000):
     sources = {
-        "indo": CLEANED_DIR / "corpus_cleaned.txt",
-        "wmt_test": CLEANED_DIR / "wmt14_deen_test_clean.txt",
-        "wmt_train": CLEANED_DIR / "wmt14_deen_train_clean.txt",
-        "wmt_val": CLEANED_DIR / "wmt14_deen_validation_clean.txt"
+        "indo": "D:/data/cleaned/processed_indo.txt",
+        "de-en": "D:/data/cleaned/processed_de_en.txt",
+        "fr-en": "D:/data/cleaned/processed_fr_en.txt"
     }
 
     all_lines = []
