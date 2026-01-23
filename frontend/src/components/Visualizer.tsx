@@ -12,17 +12,18 @@ export const TokenNode: React.FC<{
   <button
     onClick={onClick}
     className={`
-      p-3 rounded-lg border transition-all duration-300 transform text-left
+      p-3 rounded-lg border transition-all duration-300 transform text-center justify-center
       ${
         isSelected
           ? "bg-cyan-500/40 border-cyan-300 scale-110 shadow-[0_0_20px_rgba(34,211,238,0.5)] z-20"
           : isActive
-          ? "bg-cyan-500/10 border-cyan-500/50 hover:border-cyan-400"
-          : "bg-slate-900 border-slate-700 opacity-60"
+            ? "bg-cyan-500/10 border-cyan-500/50 hover:border-cyan-400"
+            : "bg-slate-900 border-slate-700 opacity-60"
       }
     `}
   >
     <div className="text-[10px] text-slate-400 mb-1 font-mono uppercase">
+      {/* IDX adalah posisi token */}
       IDX: {token.position}
     </div>
     <div className="font-mono text-sm font-bold truncate max-w-20">
@@ -120,8 +121,8 @@ export const AttentionHeatmap: React.FC<{
                       isHovered
                         ? "ring-2 ring-white z-10 scale-110"
                         : isRelated
-                        ? "ring-1 ring-white/10"
-                        : ""
+                          ? "ring-1 ring-white/10"
+                          : ""
                     }`}
                     style={{
                       backgroundColor: `rgba(34, 211, 238, ${
@@ -461,10 +462,10 @@ export const TopKProbabilities = ({ input }: { input: string }) => {
           index === 0
             ? "bg-cyan-500"
             : index === 1
-            ? "bg-cyan-600/80"
-            : index === 2
-            ? "bg-cyan-700/60"
-            : "bg-cyan-800/40",
+              ? "bg-cyan-600/80"
+              : index === 2
+                ? "bg-cyan-700/60"
+                : "bg-cyan-800/40",
       };
     });
 

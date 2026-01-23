@@ -116,7 +116,7 @@ const App: React.FC = () => {
     setCurrentStep(4);
 
     let finalOutput =
-      "I'm processing your request. DeepSeek architecture is optimized for inference.";
+      "I'm processing your request. Gpt-2 architecture is optimized for inference.";
     if (input.toLowerCase().includes("hello ai")) {
       finalOutput = "hallo im good how yours day? you good?";
     }
@@ -468,7 +468,7 @@ const App: React.FC = () => {
               </span>
             </div>
             <div className="space-y-1 text-slate-500">
-              <p>{`> Initializing DeepSeek-V3 architecture... OK`}</p>
+              <p>{`> Initializing GPT-2 architecture... OK`}</p>
               <p>{`> Loading MoE Router Config... OK`}</p>
               {tokens.length > 0 && (
                 <p className="text-cyan-500 animate-pulse">
