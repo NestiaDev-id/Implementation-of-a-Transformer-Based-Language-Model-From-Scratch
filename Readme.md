@@ -475,7 +475,6 @@ output = model.generate(input_ids, max_new_tokens=100)
 - [x] Generation with sampling
 - [x] Training script foundation
 - [x] Modular code structure
-- [x] Reference implementations (Qwen3, Llama 4, DeepSeek-R1, Hybrid)
 
 ### 🚧 In Progress
 
