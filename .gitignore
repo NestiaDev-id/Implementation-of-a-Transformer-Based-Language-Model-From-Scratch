@@ -10,7 +10,7 @@ env/
 .DS_Store
 Thumbs.db
 
-
+data/source/*
 data/raw/*
 data/cleaned/*
 data/tokenized/*

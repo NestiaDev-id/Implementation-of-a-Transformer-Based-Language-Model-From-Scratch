@@ -130,7 +130,6 @@ def process_files_wmt14():
     
     
 def reservoir_sample(file_path, sample_size):
-    """Algoritma Reservoir Sampling untuk mengambil sampel dari file besar tanpa memuat semua ke RAM."""
     reservoir = []
     if not Path(file_path).exists():
         print(f"⚠️ File tidak ditemukan untuk sampling: {file_path}")
@@ -179,10 +178,10 @@ def create_tokenizer_corpus(sample_size_per_file=1_000_000):
     
 if __name__ == "__main__":
     # proses pemberisihan data indoNLP
-    # process_files()
+    process_files()
     
     # proses pembersihan data Wmpt14 De-En
-    # process_files_wmt14()
+    process_files_wmt14()
     
     create_tokenizer_corpus(sample_size_per_file=1_000_000)
 

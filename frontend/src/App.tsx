@@ -71,7 +71,7 @@ const App: React.FC = () => {
       position: i,
       // Initial mock attention - more focused on itself
       attentionScores: words.map((_, idx) =>
-        idx === i ? 0.6 + Math.random() * 0.4 : Math.random() * 0.2
+        idx === i ? 0.6 + Math.random() * 0.4 : Math.random() * 0.2,
       ),
     }));
 
@@ -104,7 +104,7 @@ const App: React.FC = () => {
         ...e,
         active: Math.random() > 0.6,
         load: Math.floor(Math.random() * 100),
-      }))
+      })),
     );
     // setInsights(
     //   await generatePrompt(input, "Mixture of Experts (MoE) Routing")
@@ -123,11 +123,11 @@ const App: React.FC = () => {
 
     setOutput(finalOutput);
     setHistory((prev) =>
-      [{ in: input, out: finalOutput }, ...prev].slice(0, 5)
+      [{ in: input, out: finalOutput }, ...prev].slice(0, 5),
     );
     setIsProcessing(false);
     setInsights(
-      "Inference Complete. Note how MLA and MoE reduced the computational overhead."
+      "Inference Complete. Note how MLA and MoE reduced the computational overhead.",
     );
   };
 
@@ -141,7 +141,6 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 flex flex-col font-sans overflow-x-hidden">
       {/* --- HEADER --- */}
-      {/* Perbaikan: Menggunakan w-full dan px-6 sesuai instruksi */}
       <header className="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
         <div className="w-full px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-4">
@@ -150,10 +149,10 @@ const App: React.FC = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-linear-to-r from-cyan-400 to-purple-400">
-                DeepSeek Explorer
+                AttentioGraph Engine
               </h1>
               <p className="text-[10px] text-slate-500 uppercase tracking-widest font-mono mt-0.5">
-                Transformer From Scratch v3
+                GPT-2 Architecture • Pipeline Monitor
               </p>
             </div>
           </div>
@@ -214,7 +213,7 @@ const App: React.FC = () => {
                 <div
                   key={step.id}
                   className={`flex items-center gap-3 p-3 rounded-xl border transition-all duration-300 ${getStepColor(
-                    step.id
+                    step.id,
                   )}`}
                 >
                   <div
@@ -241,13 +240,11 @@ const App: React.FC = () => {
             <div className="flex-1 bg-slate-900/30 border border-slate-800 rounded-3xl p-6 relative overflow-hidden flex flex-col items-center justify-center gap-10 min-h-175 shadow-2xl backdrop-blur-sm">
               {/* --- BACKGROUND LAYERS --- */}
 
-              {/* Kita bungkus semua background di sini agar tidak terpengaruh Flexbox parent */}
               <div className="absolute inset-0 z-0">
                 {/* Layer 1: Base Color */}
                 <div className="absolute inset-0 bg-slate-950"></div>
 
                 {/* Layer 2: GRID SYSTEM (Dibuat Presisi) */}
-                {/* Menggunakan background-size 60px 60px yang strict agar kotak sempurna */}
                 <div
                   className="absolute inset-0 pointer-events-none opacity-20"
                   style={{
@@ -265,8 +262,6 @@ const App: React.FC = () => {
                 {/* Layer 4: Vignette (Bayangan Tepi) */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(2,6,23,0.8)_100%)] pointer-events-none"></div>
               </div>
-
-              {/* --- CONTENT AREA (z-10 agar di atas background) --- */}
 
               {/* Connection Lines */}
               <div className="absolute inset-0 pointer-events-none">
@@ -321,7 +316,7 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Layer 3: Experts (MoE) - PERBAIKAN DI SINI */}
+              {/* Layer 3: Experts (MoE)*/}
               <div
                 className={`z-10 w-full max-w-5xl px-4 transition-all duration-700 ${
                   currentStep >= 3
