@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 @dataclass
 class ModelConfig:
-    vocab_size: int = 65.536       # Kamus kata, sesuai hasil training tokenizer sebelumnya. Standar 50.257 untuk GPT-2, 65.536 untuk penelitian ini
+    vocab_size: int = 65536       # Kamus kata, sesuai hasil training tokenizer sebelumnya. Standar 50.257 untuk GPT-2, 65.536 untuk penelitian ini
     
     # Sequence
     max_seq_len: int = 512       # Berapa banyak kata yang diingat AI dalam satu waktu
@@ -10,7 +10,7 @@ class ModelConfig:
     # Model dimension
     d_model: int = 768            # Dimensi vektor (Hidden Size), 768 standar untuk GPT-2
     n_layers: int = 6            # Jumlah blok Transformer (kedalaman otak), 6 standar, 12 untuk GPT-3, 24 untuk PaLM, 32 untuk Llama, 40 untuk ChatGLM, 64 untuk Llama-2, 80 untuk ChatGLM-6B
-    n_heads: int = 8             # Jumlah attention heads (d_model harus habis dibagi n_heads)
+    n_heads: int = 12             # Jumlah attention heads (d_model harus habis dibagi n_heads)
     d_ff: int = 2048            # Dimensi feed-forward layer (2.3-4x d_model biasanya) ini adalah jumlah dari d_model * 4
 
     dropout: float = 0.1          # Mencegah model menghafal (overfitting)
@@ -19,9 +19,6 @@ class ModelConfig:
     pad_token_id: int = 0
     bos_token_id: int = 2
     eos_token_id: int = 3
-
-    # Dropout
-    dropout: float = 0.1
 
     # Training-related
     tie_embeddings: bool = True
